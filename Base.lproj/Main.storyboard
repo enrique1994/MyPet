@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Pet Table View Controller-->
+        <!--Pets-->
         <scene sceneID="b5q-aa-dTx">
             <objects>
-                <viewController id="qpB-sT-P7n" customClass="PetTableViewController" customModule="MyPet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pets" id="qpB-sT-P7n" customClass="PetTableViewController" customModule="MyPet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EV0-Wt-zWM"/>
                         <viewControllerLayoutGuide type="bottom" id="L08-wR-9VZ"/>
@@ -94,6 +94,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.039175503697798097" green="0.97730567266594093" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Pets" id="1pD-S2-3rw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="m4z-Pt-uZi">
+                            <connections>
+                                <segue destination="3te-dy-gKN" kind="show" id="giG-qF-ZIE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="petTableView" destination="M3y-d4-Yoe" id="Gl0-LB-rNy"/>
                     </connections>
@@ -101,6 +108,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBF-v3-oJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1880.8" y="138.98050974512745"/>
+        </scene>
+        <!--New Pet-->
+        <scene sceneID="r12-Js-mXA">
+            <objects>
+                <viewController title="New Pet" id="3te-dy-gKN" customClass="AddPetViewController" customModule="MyPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6f-AS-BOi"/>
+                        <viewControllerLayoutGuide type="bottom" id="VbY-eF-pHs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9M3-QK-G0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-HT-meR">
+                                <rect key="frame" x="0.0" y="64" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anG-PO-S1P">
+                                <rect key="frame" x="16" y="93" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039175503700000003" green="0.97730567270000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add pet" id="tgA-wD-014">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c8u-3S-mI8">
+                            <connections>
+                                <action selector="addPet:" destination="3te-dy-gKN" id="hcn-ce-slV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="petName" destination="anG-PO-S1P" id="zJ2-ss-3gA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOD-v6-xiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0lx-R6-epU">
